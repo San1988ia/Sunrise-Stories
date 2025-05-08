@@ -1,0 +1,18 @@
+@import "../variables";
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  background-color: transparent;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: $card-radius;
+  box-shadow: $box-shadow;
+  animation: fadeIn 0.6s ease-in-out;
+}

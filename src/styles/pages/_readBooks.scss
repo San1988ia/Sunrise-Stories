@@ -1,0 +1,67 @@
+@import "../variables";
+
+.read-books {
+  padding: 2rem;
+
+  h2 {
+    text-align: center;
+    font-family: $font-title;
+    color: $color-dark-brown;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    text-align: center;
+    font-family: $font-main;
+    color: $text-color;
+    margin-bottom: 1rem;
+  }
+
+  .results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+}
+
+.empty-message {
+  text-align: center;
+  font-style: italic;
+  margin-top: 2rem;
+  color: $text-color;
+}
+
+// .read-books-header {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   margin-bottom: 2rem;
+
+//   h2 {
+//     font-family: $font-title;
+//     color: $color-dark-brown;
+//     margin-bottom: 1rem;
+//     font-size: 2rem;
+//     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+//   }
+
+//   .read-books-stats {
+//     display: flex;
+//     gap: 2rem;
+//     font-family: $font-main;
+//     color: $text-color;
+
+//     p {
+//       margin: 0;
+//     }
+//   }
+// }
+
+// @media (max-width: 600px) {
+//   .read-books-stats {
+//     flex-direction: column;
+//     gap: 0.5rem;
+//     align-items: center;
+//   }
+// }
