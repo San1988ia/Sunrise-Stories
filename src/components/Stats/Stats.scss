@@ -1,0 +1,40 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.stats-container {
+  background-color: rgba($background-color, 0.95);
+  padding: 1.2rem 1.5rem;
+  border-radius: 16px;
+  border: 1px solid $color-brown;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+  font-family: $font-main;
+  width: 100%;
+  max-width: 380px;
+  margin: 1rem auto;
+
+  h1 {
+    font-size: 1.3rem;
+    color: $primary-color;
+    margin-bottom: 0.6rem;
+  }
+
+  p {
+    font-size: 1rem;
+    color: $text-color;
+    display: flex;
+    align-items: center;
+
+    strong {
+      color: $primary-color;
+      margin-left: 0.25rem;
+    }
+
+    .icon {
+      margin-right: 0.5rem;
+    }
+  }
+}

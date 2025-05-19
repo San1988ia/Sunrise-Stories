@@ -1,0 +1,97 @@
+@import "../styles/variables.scss";
+@import "../styles/mixins.scss";
+
+.read-books-page {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  h1 {
+    color: $primary-color;
+    font-family: $font-main;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  p {
+    font-family: $font-main;
+    color: $text-color;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .read-books-summary {
+    background-color: $background-color;
+    border: 1px solid $color-brown;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    @include fade-in;
+
+    p {
+      margin: 0.5rem 0;
+      strong {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    padding: 1rem;
+  }
+
+  .read-book-card {
+    background-color: $color-beige;
+    border: 1px solid $color-brown;
+    border-radius: 10px;
+    padding: 1.5rem;
+    font-family: $font-main;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include fade-in;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      transform: translateY(-4px);
+    }
+
+    h2 {
+      margin-bottom: 0.5rem;
+      color: $primary-color;
+      font-size: 1.2rem;
+    }
+
+    p {
+      margin: 0.3rem 0;
+
+      strong {
+        color: $text-color;
+      }
+    }
+
+    button {
+      @include button-base($accent-color, $color-brown);
+      margin-top: 1rem;
+
+      &:hover {
+        transform: translateY(-2px);
+      }
+
+      &:focus {
+        outline: 2px solid $primary-color;
+        outline-offset: 2px;
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+@import "../styles/variables.scss";
+@import "../styles/mixins.scss";
+
+.book-details-page {
+  background-color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  @include fade-in;
+
+  h1 {
+    color: $primary-color;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-family: $font-main;
+    font-size: 1rem;
+    color: $text-color;
+    margin-bottom: 0.5rem;
+  }
+
+  .book-detail-cover {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    border: 2px solid $color-brown;
+    border-radius: 8px;
+  }
+
+  button {
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0.5rem 0 0;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $color-pink;
+    }
+  }
+
+  .toc-section {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: rgba($background-color, 0.9);
+    border: 1px solid $color-brown;
+    border-radius: 8px;
+
+    button {
+      background-color: $accent-color;
+      color: $color-brown;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 1rem;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: $color-pink;
+      }
+    }
+
+    strong {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      color: $primary-color;
+      font-family: $font-main;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+      list-style-type: disc;
+
+      li {
+        margin-bottom: 0.3rem;
+        font-family: $font-main;
+        color: $text-color;
+        font-size: 0.95rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import "../styles/variables.scss";
+@import "../styles/mixins.scss";
+
+.search-page {
+  padding: 6rem 2rem 2rem;
+  min-height: 100vh;
+  font-family: $font-main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+}
+
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  input {
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    border: 2px solid $color-brown;
+    border-radius: 8px;
+    min-width: 250px;
+    max-width: 400px;
+    font-family: $font-main;
+    color: $text-color;
+    background-color: rgba(255, 255, 255, 0.85);
+
+    &::placeholder {
+      color: #888;
+    }
+  }
+
+  button {
+    @include button-base($accent-color, $color-brown);
+    font-weight: bold;
+    border-radius: 8px;
+
+    &:hover {
+      transform: translateY(-1px);
+    }
+
+    &:focus {
+      outline: 2px solid $primary-color;
+      outline-offset: 2px;
+    }
+  }
+}
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+}

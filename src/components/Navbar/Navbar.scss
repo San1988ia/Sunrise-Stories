@@ -1,0 +1,91 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: $color-brown;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  font-family: $font-main;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  h1 {
+    color: $accent-color;
+    font-size: 1.4rem;
+    margin: 0;
+    font-weight: 700;
+  }
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  flex: 0 1 auto;
+  width: auto;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.2rem;
+
+    li a {
+      font-size: 1rem;
+      font-weight: 600;
+      white-space: nowrap;
+      color: white;
+      text-decoration: none;
+      padding: 0.4rem 0.6rem;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+
+      &.active {
+        background-color: $accent-color;
+        color: $color-brown;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      &:hover {
+        background-color: $color-pink;
+        color: $color-brown;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .nav-right {
+    width: 100%;
+
+    ul {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      gap: 0.8rem;
+    }
+  }
+}

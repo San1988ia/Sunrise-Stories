@@ -1,12 +1,20 @@
-@import "variables";
-@import "mixins";
-@import "components/bookCard";
-@import "components/navbar";
-@import "components/stats";
-@import "pages/search";
-@import "pages/readBooks";
-@import "./components/layout";
-@import "pages/favorites.scss";
+@import "./variables";
+@import "./mixins";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: visible !important;
+}
+
+//Globala stilar
+:root {
+  --font-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --text-color: #222;
+}
 
 body {
   background-image: url("https://img.freepik.com/free-photo/beautiful-landscape-sea-ocean-leisure-travel-vacation_74190-8013.jpg?t=st=1745955208~exp=1745958808~hmac=b4de2df453a4419784b72ca11abc47dd27e7586cc8180c1f637536d48cf48759&w=1380");
@@ -16,26 +24,10 @@ body {
   background-repeat: no-repeat;
   min-height: 100vh;
   font-family: $font-main;
+  color: $text-color;
 }
 
 p {
   font-size: 1rem;
-  color: $text-color;
-  font-family: $font-main;
   line-height: 1.5;
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-in {
-  animation: fadeIn 0.6s ease-in-out;
 }
