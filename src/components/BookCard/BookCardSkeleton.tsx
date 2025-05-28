@@ -1,8 +1,8 @@
 import "./BookCardSkeleton.scss";
 
-const BookDetailsSkeleton = () => {
+const BookCardSkeleton = () => {
   return (
-    <div className="book-details-skeleton fade_in">
+    <div className="book-card skeleton fade_in">
       <div className="skeleton-cover" />
       <div className="skeleton-title" />
       <div className="skeleton-author" />
@@ -15,4 +15,4 @@ const BookDetailsSkeleton = () => {
   );
 };
 
-export default BookDetailsSkeleton;
+export default BookCardSkeleton;

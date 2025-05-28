@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import BookDetailsPage from "./pages/BookDetailsPage";
 import FavoritesPage from "./pages/FavoritesPage";
@@ -7,7 +7,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 import ReadBooksPage from "./pages/ReadBooksPage";
 import SearchPage from "./pages/SearchPage";
 
-export const router = createBrowserRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
@@ -24,3 +24,7 @@ export const router = createBrowserRouter([
     element: <NotFoundPage />,
   },
 ]);
+
+export default function AppRouter() {
+  return <RouterProvider router={router} />;
+}

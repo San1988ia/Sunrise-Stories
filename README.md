@@ -7,11 +7,12 @@ Sök bland böcker via Open Library, favoritmarkera titlar och håll koll på va
 
 -🔎Sök efter böcker via Open Library API.
 -📚Visa detaljerad information om varje bok (författare, ämnen, innehåll).
-
 -⭐Favoritmarkera böcker och visa dina favoriter.
 -✅Markera böcker som lästa med betyg, recensioner och antal sidor.
 -📈Se statistik över lästa böcker och sidor.
 -🧭Navigering mellan sidor med React Router.
+
+---
 
 💻 Tekniker som används
 -React + Vite
@@ -19,11 +20,6 @@ Sök bland böcker via Open Library, favoritmarkera titlar och håll koll på va
 -React Router
 -Context API (global state)
 -Custom hooks (useSearchBooks, useLocalstorage mfl)
--SCSS-modulär styling
+-SCSS med modulär komponentstyling
 
-👩‍🎨 Designskiss (Figma)
-ska lägga mitt projekt här från figma
-
-💡 Så här kör du projektet lokalt
--Klona repo:
-git clone
+---

@@ -26,6 +26,8 @@ const SearchPage = () => {
         <button type="submit">Sök</button>
       </form>
 
+      {error && <p className="error-text">{error}</p>}
+
       {isLoading && (
         <div className="book-list">
           {Array.from({ length: 6 }).map((_, index) => (
@@ -33,8 +35,6 @@ const SearchPage = () => {
           ))}
         </div>
       )}
-
-      {error && <p className="error-text">{error}</p>}
 
       {!isLoading && books.length > 0 && (
         <div className="book-list">

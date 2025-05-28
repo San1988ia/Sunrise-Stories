@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
+import BookDetailsSkeleton from "../components/BookCard/BookCardSkeleton";
 import { useLibrary } from "../context/LibraryContext";
 import { useBookDetails } from "../hooks/useBookDetails";
 import "../pages/BookDetailPage.scss";
@@ -21,7 +22,7 @@ const BookDetailsPage = () => {
     if (book) markAsRead(book, 4, "Bra bok!");
   };
 
-  if (isLoading) return <p>Laddar bok...</p>;
+  if (isLoading) return <BookDetailsSkeleton />;
   if (error || !book) return <p>{error ?? "Kunde inte visa bok."}</p>;
 
   return (
